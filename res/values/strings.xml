@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">Stay Safe Andy</string>
+    
+    <string-array name="spinnerItems">
+        <item>Car</item>
+        <item>Bus</item>
+        <item>Taxi</item>
+    </string-array>
+
+</resources>
