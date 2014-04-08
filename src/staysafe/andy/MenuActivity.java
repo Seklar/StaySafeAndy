@@ -53,5 +53,11 @@ public class MenuActivity extends Activity implements OnClickListener {
 		Intent createintent = new Intent(this, ContactActivity.class);
 		startActivity(createintent);
 	}
+	
+	public void AboutPage(View v)
+	{
+		Intent createintent = new Intent(this, AboutActivity.class);
+		startActivity(createintent);
+	}
 
 }
