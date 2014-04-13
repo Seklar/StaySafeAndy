@@ -7,5 +7,9 @@
         <item>Bus</item>
         <item>Taxi</item>
     </string-array>
+    <string-array name="JourneyArray">
+        <item>Home to Work</item>
+        <item>Work to Home</item>
 
+    </string-array>
 </resources>

@@ -4,19 +4,19 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+        
+    <Spinner
+        android:id="@+id/spn_Journey"
+        android:layout_width="265dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/JourneyArray" />
+
     <Button
-        android:id="@+id/createButton"
+        android:id="@+id/btn_addjourney"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="CreatePage"
-        android:text="New Journey" />
-
-    <Button
-        android:id="@+id/selectButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Existing Journeys" />
-
+        android:text="Add Journey +" />
     <Button
         android:id="@+id/contactButton"
         android:layout_width="match_parent"
@@ -34,6 +34,15 @@
         android:id="@+id/aboutButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="About" />
+        android:text="About" 
+        android:onClick="AboutPage"/>
+    
+
+    <Button
+        android:id="@+id/btn_Alarm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="AlarmClick"
+        android:text="Alarm Page" />
 
 </LinearLayout>

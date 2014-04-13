@@ -5,22 +5,24 @@
     android:orientation="vertical" >
 
     <Button
-        android:id="@+id/aboutButton"
+        android:id="@+id/btn_danger"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="Danger" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_safe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.63"
-        android:text="Button" />
+        android:onClick="safeClick"
+        android:text="Safe" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btn_vib"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:onClick="startAlarm"
+        android:text="Start Alarm" />
 
 </LinearLayout>
