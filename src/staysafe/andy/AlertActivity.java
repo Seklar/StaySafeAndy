@@ -12,89 +12,71 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class AlertActivity extends Activity implements OnClickListener {
-	
-
-	
+    public MediaPlayer mp;
+    Vibrator vib;
+        
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.alert);
-                
-   	Button btn_safe = (Button)this.findViewById(R.id.btn_safe);
-    	Button btn_vib = (Button)this.findViewById(R.id.btn_vib);
+        
+        Button btn_safe = (Button)this.findViewById(R.id.btn_safe);
+    	Button btn_danger = (Button)this.findViewById(R.id.btn_danger);
 
+    	mp = MediaPlayer.create(this, R.raw.soundfile);
+    	vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+
+    	
     	btn_safe.setOnClickListener(this);
-    	btn_vib.setOnClickListener(this);
-
-    	   
-
-    }
-
-
-	public void onClick(View v) {
-		
-
-		/*
-		switch(v.getId()){
-		case R.id.btn_vib:
-
-			break;
-
-		case R.id.btn_safe:
-
-			//please for god sake stop	
-			  if (mp.isPlaying()) {
-				  Toast.makeText(getApplicationContext(), "yep", Toast.LENGTH_SHORT).show();
-					
-			    }
-			   
-	            
-			//cancel the vibrator
-			vib.cancel();
-			Toast.makeText(getApplicationContext(), "Should stop now", Toast.LENGTH_SHORT).show();
-			
-			//Intent myIntent = new Intent(this, MenuActivity.class);
-            //startActivityForResult(myIntent, 0); 
-           
-			break;
-		
-
-			}*/
-		
-		}
-
-	public void startAlarm(View v)
-	{
-		Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-	    MediaPlayer mp = MediaPlayer.create(AlertActivity.this, R.raw.soundfile);
-		Toast.makeText(getApplicationContext(), "Starting Now", Toast.LENGTH_SHORT).show();
+    	btn_danger.setOnClickListener(this);
+    	
 		//setting the pattern and telling it to start
 		long[] pattern = {100, 200, 400};
+		// starting vibration and music player
 		vib.vibrate(pattern, 0);
 		mp.start();  
 
-	}
-	
-	public void safeClick(View v)
-	{
-		Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-	    MediaPlayer mp = MediaPlayer.create(AlertActivity.this, R.raw.soundfile);
-		//please for god sake stop	
-		  if (mp.isPlaying()) {
-			  Toast.makeText(getApplicationContext(), "yep", Toast.LENGTH_SHORT).show();
-		  }
-		   
-          mp.pause();
-		//cancel the vibrator
-		vib.cancel();
+    }
 
+	public void onClick(View v) {
+		switch(v.getId()){
+		
+		case R.id.btn_danger:
+			if (mp.isPlaying()) {
+				 vib.cancel();
+				 mp.stop();
+	                mp.prepareAsync();
+	                mp.seekTo(0);
+				 
+				Intent menuintent = new Intent(this, MenuActivity.class);
+				startActivity(menuintent);
+				Toast.makeText(getApplicationContext(), "Danger", Toast.LENGTH_SHORT).show();
+			  }
+			 else {
+					Toast.makeText(getApplicationContext(), "Nothing is playing", Toast.LENGTH_SHORT).show();
+					  }
+			break;
+		
+		
+		case R.id.btn_safe:
+			if (mp.isPlaying()) {
+				vib.cancel();
+				  mp.stop();
+	                mp.prepareAsync();
+	                mp.seekTo(0);
+				Intent menuintent = new Intent(this, MenuActivity.class);
+				startActivity(menuintent);
+			  }
+			 else {
+					Toast.makeText(getApplicationContext(), "Nothing is playing", Toast.LENGTH_SHORT).show();
+					  }
+			break;
+		}
+		
+
+	
 	}
 	
-	
-	
-	public void onClick1(View arg0) {
-        setResult(RESULT_OK);
-        finish();
-	}
+
 
 
 

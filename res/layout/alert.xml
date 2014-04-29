@@ -15,14 +15,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.63"
-        android:onClick="safeClick"
         android:text="Safe" />
 
     <Button
-        android:id="@+id/btn_vib"
+        android:id="@+id/btn_danger"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="startAlarm"
-        android:text="Start Alarm" />
+        android:text="Danger" />
 
 </LinearLayout>
