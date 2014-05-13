@@ -7,12 +7,18 @@
         <item>Bus</item>
         <item>Taxi</item>
     </string-array>
-    <string-array name="JourneyArray">
+    <string-array name="spinner2Items">
+        <item>John Doe</item>
+        <item>Jane Doe</item>
+        <item>Jack Doe</item>
+        <item>Jill Doe</item>
+    </string-array>
+        <string-array name="JourneyArray">
         <item>Home to Work</item>
         <item>Work to Home</item>
-
+        <item>Jack Doe</item>
+        <item>Jill Doe</item>
     </string-array>
     
 
 </resources>
-
