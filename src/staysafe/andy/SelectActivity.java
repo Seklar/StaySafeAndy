@@ -16,7 +16,7 @@ public class SelectActivity extends Activity implements OnClickListener {
 		setContentView(R.layout.select);
 		
 		ListView listView = (ListView)
-				findViewById(R.id.selectJourneyList);
+				findViewById(R.id.selectjourneylist);
 				selectAdapter = new SelectAdapter();
 				listView.setAdapter(selectAdapter);
 	}

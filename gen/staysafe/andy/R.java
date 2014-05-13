@@ -9,7 +9,7 @@ package staysafe.andy;
 
 public final class R {
     public static final class array {
-        public static final int JourneyArray=0x7f060001;
+        public static final int spinner2Items=0x7f060001;
         public static final int spinnerItems=0x7f060000;
     }
     public static final class attr {
@@ -18,38 +18,54 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int aboutButton=0x7f08001c;
-        public static final int addnewButton=0x7f080002;
-        public static final int alertButton=0x7f08001b;
-        public static final int btn_Alarm=0x7f08001d;
-        public static final int btn_addjourney=0x7f080019;
-        public static final int btn_danger=0x7f080000;
-        public static final int btn_safe=0x7f080001;
-        public static final int contactButton=0x7f08001a;
-        public static final int contactListView=0x7f080004;
-        public static final int countdownDuration=0x7f080007;
-        public static final int createAddButton=0x7f080014;
-        public static final int createDestinationEntry=0x7f08000e;
-        public static final int createDestinationHeader=0x7f08000d;
-        public static final int createDurationEntry=0x7f080010;
-        public static final int createDurationHeader=0x7f08000f;
-        public static final int createHeader=0x7f08000a;
-        public static final int createIntervalEntry=0x7f080012;
-        public static final int createIntervalHeader=0x7f080011;
-        public static final int createLocationEntry=0x7f08000c;
-        public static final int createLocationHeader=0x7f08000b;
-        public static final int createSaveStart=0x7f080015;
-        public static final int createTransport=0x7f080013;
-        public static final int defaultDestination=0x7f080005;
-        public static final int duration_view=0x7f080017;
-        public static final int name_view=0x7f080016;
-        public static final int selectHeader=0x7f08001e;
-        public static final int selectJourneyList=0x7f08001f;
-        public static final int spn_Journey=0x7f080018;
-        public static final int textView1=0x7f080003;
-        public static final int textView2=0x7f080006;
-        public static final int textView4=0x7f080008;
-        public static final int textView6=0x7f080009;
+        public static final int aboutButton=0x7f080000;
+        public static final int addnewButton=0x7f080003;
+        public static final int alertButton=0x7f08002e;
+        public static final int btnAdd=0x7f080024;
+        public static final int btnArrived=0x7f080009;
+        public static final int btnBackground=0x7f08000a;
+        public static final int button2=0x7f080001;
+        public static final int button3=0x7f080002;
+        public static final int cAddress=0x7f08002a;
+        public static final int contactButton=0x7f08002d;
+        public static final int contactListView=0x7f080005;
+        public static final int contactListview=0x7f08001d;
+        public static final int contactName=0x7f080027;
+        public static final int countdownDuration=0x7f080008;
+        public static final int createAddButton=0x7f080015;
+        public static final int createButton=0x7f08002b;
+        public static final int createDestinationEntry=0x7f08000f;
+        public static final int createDestinationHeader=0x7f08000e;
+        public static final int createHeader=0x7f08000b;
+        public static final int createIntervalEntry=0x7f080011;
+        public static final int createIntervalHeader=0x7f080010;
+        public static final int createLocationEntry=0x7f08000d;
+        public static final int createLocationHeader=0x7f08000c;
+        public static final int createSaveStart=0x7f080016;
+        public static final int createTransport=0x7f080012;
+        public static final int defaultDestination=0x7f080006;
+        public static final int duration_view=0x7f080026;
+        public static final int editText1=0x7f080017;
+        public static final int editText2=0x7f080019;
+        public static final int emailAddress=0x7f080029;
+        public static final int lblContacts=0x7f08001c;
+        public static final int lblCreatorTable=0x7f08001f;
+        public static final int name_view=0x7f080025;
+        public static final int phoneNumber=0x7f080028;
+        public static final int selectButton=0x7f08002c;
+        public static final int selectjourneylist=0x7f08002f;
+        public static final int spinner1=0x7f080014;
+        public static final int tabContactList=0x7f08001b;
+        public static final int tabCreator=0x7f08001e;
+        public static final int tabHost=0x7f08001a;
+        public static final int textView1=0x7f080004;
+        public static final int textView2=0x7f080007;
+        public static final int textView3=0x7f080013;
+        public static final int textView4=0x7f080018;
+        public static final int txtAddress=0x7f080023;
+        public static final int txtEmail=0x7f080022;
+        public static final int txtName=0x7f080020;
+        public static final int txtPhone=0x7f080021;
     }
     public static final class layout {
         public static final int about=0x7f030000;
@@ -58,12 +74,14 @@ public final class R {
         public static final int countdown=0x7f030003;
         public static final int create=0x7f030004;
         public static final int createcontact=0x7f030005;
-        public static final int journey_list_item=0x7f030006;
-        public static final int menu=0x7f030007;
-        public static final int select=0x7f030008;
+        public static final int fragment_main=0x7f030006;
+        public static final int journey_list_item=0x7f030007;
+        public static final int listview_item=0x7f030008;
+        public static final int menu=0x7f030009;
+        public static final int select=0x7f03000a;
     }
     public static final class raw {
-        public static final int soundfile=0x7f040000;
+        public static final int journey=0x7f040000;
     }
     public static final class string {
         public static final int app_name=0x7f050000;

@@ -44,40 +44,38 @@
         android:ems="10" />
 
     <TextView
-        android:id="@+id/createDurationHeader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Estimated Duration"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <EditText
-        android:id="@+id/createDurationEntry"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="numberDecimal" />
-
-    <TextView
         android:id="@+id/createIntervalHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Interval"
         android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <EditText
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:paddingTop="20px">
+    <EditText
         android:id="@+id/createIntervalEntry"
-        android:layout_width="158dp"
+        android:layout_width="64dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        android:text="5" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Minutes"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+	</LinearLayout>
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Mode of Transport"
         android:textAppearance="?android:attr/textAppearanceMedium" />
-
+    
     <Spinner
         android:id="@+id/createTransport"
         android:layout_width="match_parent"
@@ -86,18 +84,33 @@
         android:entries="@array/spinnerItems"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <Button
-        android:id="@+id/createAddButton"
+    <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save Journey"
-        android:onClick="saveJourney" />
+        android:text="I.C.E. Contact"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@android:layout/simple_spinner_item"
+        android:entries="@array/spinner2Items"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/createAddButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="saveJourney"
+        android:text="Save and Start Journey" />
 
     <Button
         android:id="@+id/createSaveStart"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Save and Start Journey"
-        android:onClick="addJourney" />
+        android:onClick="addJourney"
+        android:text="Save Journey" />
 
 </LinearLayout>

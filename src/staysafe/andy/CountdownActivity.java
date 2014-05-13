@@ -23,7 +23,6 @@ public class CountdownActivity extends Activity implements OnClickListener {
 
 		Intent intent = getIntent();
 		String location = intent.getStringExtra("endlocation");
-		String duration = intent.getStringExtra("duration");
 		String interval = intent.getStringExtra("interval");
 		
 		final TextView mTextView = (TextView)this.findViewById(R.id.countdownDuration);
@@ -31,12 +30,12 @@ public class CountdownActivity extends Activity implements OnClickListener {
 		final TextView mTextView2 = (TextView)this.findViewById(R.id.defaultDestination);
 		mTextView2.setText(location);
 		
-		new CountDownTimer((Long.valueOf(duration)*60000), 1000){
+		new CountDownTimer((Long.valueOf(interval)*60000), 1000){
 			
 			public void onTick(long millisUntilFinished)
 			{
 				String t = getDurationBreakdown(millisUntilFinished);
-				mTextView.setText(t);
+				mTextView.setText(t + " Minutes");
 			}
 			
 			public void onFinish()

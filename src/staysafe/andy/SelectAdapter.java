@@ -50,9 +50,6 @@ public class SelectAdapter extends BaseAdapter {
 		TextView nameTextView = (TextView) view.findViewById(R.id.name_view);
 		nameTextView.setText(journey.getName());
 		
-		TextView durationTextView = (TextView) view.findViewById(R.id.duration_view);
-		nameTextView.setText(String.valueOf(journey.getDuration()));
-		
 		return view;
 	}
 
